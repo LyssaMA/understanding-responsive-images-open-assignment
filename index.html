@@ -8,7 +8,7 @@
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="normalize.css">
-	<link href='http://fonts.googleapis.com/css?family=Lato:700, Merriweather:400,400italic,700,700italic,300,300italic'
+	<link href='https://fonts.googleapis.com/css?family=Lato:700|Merriweather:400,400italic,700,700italic,300,300italic'
 		rel='stylesheet' type='text/css'>
 
 	<style>
@@ -116,8 +116,15 @@
 		<p>Just down the street from the Starbucks Coffee Shop.</p>
 
 		<figure class="fw">
-			<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/q_auto,w_300/v1730047793/office-1_sxlegu.jpg"
-				alt="office">
+			<picture>
+				<source srcset="
+					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047793/office-1_sxlegu.jpg 1200w,
+					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047793/office-1_sxlegu.jpg 600w,
+					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047793/office-1_sxlegu.jpg 300w"
+					sizes="(max-width: 1200px) 100vw, 1200px">
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047793/office-1_sxlegu.jpg"
+					alt="office" width="3500" height="2334">
+			</picture>
 			<figcaption>Join us today!</figcaption>
 		</figure>
 	</header>
@@ -137,37 +144,61 @@
 
 		<div class="figure-grp">
 			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/q_auto,w_300/v1730047794/office-2_bglpgi.jpg"
-					alt="office">
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047794/office-2_bglpgi.jpg"
+					srcset="
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047794/office-2_bglpgi.jpg 300w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047794/office-2_bglpgi.jpg 600w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047794/office-2_bglpgi.jpg 1200w"
+					alt="office" width="3500" height="2334">
 			</figure>
 
 			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/q_auto,w_300/v1730047786/office-3_rw2kbi.jpg"
-					alt="office">
-			</figure>
-		</div> <!-- end figure-grp -->
-
-		<div class="figure-grp">
-			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/q_auto,w_300/v1730047788/office-4_anvisg.jpg"
-					alt="office">
-			</figure>
-
-			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/q_auto,w_300/v1730047788/office-5_rgv8ez.jpg"
-					alt="office">
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047786/office-3_rw2kbi.jpg"
+					srcset="
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047786/office-3_rw2kbi.jpg 300w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047786/office-3_rw2kbi.jpg 600w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047786/office-3_rw2kbi.jpg 1200w"
+					alt="office" width="3500" height="2333">
 			</figure>
 		</div> <!-- end figure-grp -->
 
 		<div class="figure-grp">
 			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/q_auto,w_300/v1730047790/office-6_d5yu3t.jpg"
-					alt="office">
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047788/office-4_anvisg.jpg"
+					srcset="
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047788/office-4_anvisg.jpg 300w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047788/office-4_anvisg.jpg 600w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047788/office-4_anvisg.jpg 1200w"
+					alt="office" width="3500" height="2333">
 			</figure>
 
 			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/q_auto,w_300/v1730047790/office-7_i3ifmw.jpg"
-					alt="office">
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-5_rgv8ez.jpg"
+					srcset="
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-5_rgv8ez.jpg 300w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047792/office-5_rgv8ez.jpg 600w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047792/office-5_rgv8ez.jpg 1200w"
+					alt="office" width="3500" height="2333">
+			</figure>
+		</div> <!-- end figure-grp -->
+
+		<div class="figure-grp">
+			<figure class="half">
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047790/office-6_d5yu3t.jpg"
+					srcset="
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047790/office-6_d5yu3t.jpg 300w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047790/office-6_d5yu3t.jpg 600w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047790/office-6_d5yu3t.jpg 1200w"
+					alt="office" width="3500" height="2334">
+			</figure>
+
+			<figure class="half">
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047790/office-7_i3ifmw.jpg"
+					srcset="
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047790/office-7_i3ifmw.jpg 300w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047790/office-7_i3ifmw.jpg 600w,
+						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047790/office-7_i3ifmw.jpg 1200w"
+					alt="office" width="3500" height="2333">
 			</figure>
 		</div> <!-- end figure-grp -->
 
@@ -177,14 +208,22 @@
 			facere officiis ullam, est quasi debitis voluptates corporis culpa!</p>
 
 		<figure>
-			<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/q_auto,w_300/v1730047792/office-8_ccnhov.jpg"
-				alt="office">
+			<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-8_ccnhov.jpg"
+				srcset="
+					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-8_ccnhov.jpg 300w,
+					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047792/office-8_ccnhov.jpg 600w,
+					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047792/office-8_ccnhov.jpg 1200w"
+				alt="office" width="3500" height="2333">
 			<figcaption>Post-its</figcaption>
 		</figure>
 
 		<figure class="fw">
-			<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/q_auto,w_300/v1730047792/office-9_n4p0l9.jpg"
-				alt="office">
+			<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-9_n4p0l9.jpg"
+				srcset="
+					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-9_n4p0l9.jpg 300w,
+					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047792/office-9_n4p0l9.jpg 600w,
+					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047792/office-9_n4p0l9.jpg 1200w"
+				alt="office" width="3500" height="2333">
 			<figcaption>Laptop on table</figcaption>
 		</figure>
 	</main>
