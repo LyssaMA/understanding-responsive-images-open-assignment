@@ -13,9 +13,18 @@
 
 	<style>
 		/* General Styling */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
 		body {
-			font: 1em/1.5 'Merriweather', Georgia, serif;
-			padding: 3em 0;
+			font: clamp(1em, 2vw, 1.125em) / 1.5 'Merriweather', Georgia, serif;
+			padding: 2rem;
+			display: grid;
+			grid-template-rows: auto 1fr auto;
+			gap: 2rem;
 		}
 
 		h1 {
@@ -37,7 +46,7 @@
 			margin-top: 1.5em;
 			font-style: italic;
 			font-weight: 300;
-			color: #CC9B70;
+			color: #ad7748;
 			text-align: left;
 		}
 
@@ -49,23 +58,11 @@
 			max-width: 100%;
 		}
 
-		figure.fw figcaption,
-		figure.half figcaption {
-			text-align: center;
-		}
-
-		figure.fw figcaption::after,
-		figure.half figcaption::after {
-			content: '-';
-		}
-
-		figure.half {
-			width: 50%;
-			float: left;
-		}
-
-		.figure-grp+.figure-grp figure {
-			margin-top: -3em;
+		.figure-grp {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+			margin: 2rem 0;
 		}
 
 		blockquote {
@@ -88,9 +85,10 @@
 
 		p {
 			color: #444;
-			max-width: 45em;
-			margin-left: auto;
-			margin-right: auto;
+			max-width: 65ch;
+			margin: auto;
+			padding: 0 1rem;
+			line-height: 1.5;
 		}
 
 		img {
@@ -103,6 +101,13 @@
 			max-width: 45em;
 			margin: 3em auto;
 		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.figure-grp {
+				grid-template-columns: 1fr;
+			}
+		}
 	</style>
 </head>
 
@@ -110,19 +115,20 @@
 
 	<!-- HEADER -->
 	<header>
-		<h1>Clearview office space</h1>
-
-		<p>A great place to work, share new ideas and make friends.</p>
-		<p>Just down the street from the Starbucks Coffee Shop.</p>
+		<h1> The Collective office space</h1>
+		<p>Welcome to The Collective, where creativity and collaboration come to life. Our vibrant environment is
+			designed to inspire innovation and foster connections among like-minded professionals.</p>
+		<p>Located in the heart of the city, we’re just steps away from local cafés and eateries, making it easy to grab
+			a coffee or lunch while networking with fellow entrepreneurs.</p>
 
 		<figure class="fw">
 			<picture>
 				<source srcset="
-					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047793/office-1_sxlegu.jpg 1200w,
-					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047793/office-1_sxlegu.jpg 600w,
-					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047793/office-1_sxlegu.jpg 300w"
+                    https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084230/1._desktop_hoaaph.jpg 1200w,
+                    https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084230/1._desktop_hoaaph.jpg 600w,
+                    https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084230/1._desktop_hoaaph.jpg 300w"
 					sizes="(max-width: 1200px) 100vw, 1200px">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047793/office-1_sxlegu.jpg"
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084230/1._desktop_hoaaph.jpg"
 					alt="office" width="3500" height="2334">
 			</picture>
 			<figcaption>Join us today!</figcaption>
@@ -131,108 +137,99 @@
 
 	<!-- MAIN -->
 	<main>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore veniam, accusantium ducimus iure
-			exercitationem accusamus alias unde esse reiciendis. Eum!</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, asperiores voluptates non maxime sequi
-			consectetur quasi mollitia corrupti excepturi veritatis qui voluptate corporis, quos perspiciatis cum
-			ducimus nostrum ex esse numquam necessitatibus, illum alias consequuntur eum odio adipisci? Doloremque
-			voluptates repudiandae quis ad excepturi facere, temporibus beatae ex atque sint ipsum omnis illo officiis
-			in cum, odio, eum maxime quidem consectetur. Voluptates facilis delectus architecto est dolore, perspiciatis
-			vitae quidem impedit nostrum esse fugit, velit hic eius laborum itaque reprehenderit repellat soluta
-			repellendus aliquam. Veritatis dolorem officia provident dolores, ad quas rerum autem est, totam id fugiat
-			magni mollitia. Illo.</p>
+		<p>At Clearview, we believe that a well-designed workspace enhances both productivity and creativity. Our office
+			spaces are meticulously designed to foster collaboration and innovation, allowing you and your team to
+			thrive in a dynamic environment.</p>
+		<p>Our amenities include high-speed internet, modern meeting rooms, and comfortable break areas to ensure you
+			have everything you need. With a focus on creating a welcoming atmosphere, our spaces encourage interaction
+			and inspiration, making work not just productive but enjoyable.</p>
+
 
 		<div class="figure-grp">
-			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047794/office-2_bglpgi.jpg"
-					srcset="
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047794/office-2_bglpgi.jpg 300w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047794/office-2_bglpgi.jpg 600w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047794/office-2_bglpgi.jpg 1200w"
+			<figure>
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084231/2._office_vkgg1f.jpg" srcset="
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084231/2._office_vkgg1f.jpg 300w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084231/2._office_vkgg1f.jpg 600w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084231/2._office_vkgg1f.jpg 1200w"
 					alt="office" width="3500" height="2334">
 			</figure>
 
-			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047786/office-3_rw2kbi.jpg"
-					srcset="
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047786/office-3_rw2kbi.jpg 300w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047786/office-3_rw2kbi.jpg 600w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047786/office-3_rw2kbi.jpg 1200w"
+			<figure>
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084233/3._workplace_zawxqc.jpg" srcset="
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084233/3._workplace_zawxqc.jpg 300w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084233/3._workplace_zawxqc.jpg 600w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084233/3._workplace_zawxqc.jpg 1200w"
 					alt="office" width="3500" height="2333">
 			</figure>
 		</div> <!-- end figure-grp -->
 
 		<div class="figure-grp">
-			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047788/office-4_anvisg.jpg"
+			<figure>
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084234/4._flower-vase_hykuz7.jpg"
 					srcset="
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047788/office-4_anvisg.jpg 300w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047788/office-4_anvisg.jpg 600w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047788/office-4_anvisg.jpg 1200w"
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084234/4._flower-vase_hykuz7.jpg 300w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084234/4._flower-vase_hykuz7.jpg 600w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084234/4._flower-vase_hykuz7.jpg 1200w"
 					alt="office" width="3500" height="2333">
 			</figure>
 
-			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-5_rgv8ez.jpg"
-					srcset="
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-5_rgv8ez.jpg 300w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047792/office-5_rgv8ez.jpg 600w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047792/office-5_rgv8ez.jpg 1200w"
+			<figure>
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084223/5._chairs_pbvdhl.jpg" srcset="
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084223/5._chairs_pbvdhl.jpg 300w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084223/5._chairs_pbvdhl.jpg 600w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084223/5._chairs_pbvdhl.jpg 1200w"
 					alt="office" width="3500" height="2333">
 			</figure>
 		</div> <!-- end figure-grp -->
 
 		<div class="figure-grp">
-			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047790/office-6_d5yu3t.jpg"
+			<figure>
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084225/6._workplace_2_wfrpov.jpg"
 					srcset="
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047790/office-6_d5yu3t.jpg 300w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047790/office-6_d5yu3t.jpg 600w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047790/office-6_d5yu3t.jpg 1200w"
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084225/6._workplace_2_wfrpov.jpg 300w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084225/6._workplace_2_wfrpov.jpg 600w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084225/6._workplace_2_wfrpov.jpg 1200w"
 					alt="office" width="3500" height="2334">
 			</figure>
 
-			<figure class="half">
-				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047790/office-7_i3ifmw.jpg"
-					srcset="
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047790/office-7_i3ifmw.jpg 300w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047790/office-7_i3ifmw.jpg 600w,
-						https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047790/office-7_i3ifmw.jpg 1200w"
+			<figure>
+				<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084226/7._desk_ismvpe.jpg" srcset="
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084226/7._desk_ismvpe.jpg 300w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084226/7._desk_ismvpe.jpg 600w,
+                        https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084226/7._desk_ismvpe.jpg 1200w"
 					alt="office" width="3500" height="2333">
 			</figure>
 		</div> <!-- end figure-grp -->
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quisquam voluptatum in ipsa provident
-			blanditiis nesciunt facere. Ea, officiis provident placeat fugit cupiditate minima enim veniam libero hic
-			tempore deserunt iusto qui harum vero consectetur suscipit, architecto cum voluptate assumenda. Eveniet
-			facere officiis ullam, est quasi debitis voluptates corporis culpa!</p>
+		<p>We prioritize the well-being of our members by providing a healthy work environment. Our spaces are filled
+			with natural light and greenery, promoting a sense of calm and focus. Join us at Clearview and experience
+			how a thoughtfully designed workspace can transform your workday.</p>
 
 		<figure>
-			<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-8_ccnhov.jpg"
-				srcset="
-					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-8_ccnhov.jpg 300w,
-					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047792/office-8_ccnhov.jpg 600w,
-					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047792/office-8_ccnhov.jpg 1200w"
+			<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084227/8._chairs_2_vn7rhp.jpg" srcset="
+                    https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084227/8._chairs_2_vn7rhp.jpg 300w,
+                    https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084227/8._chairs_2_vn7rhp.jpg 600w,
+                    https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084227/8._chairs_2_vn7rhp.jpg 1200w"
 				alt="office" width="3500" height="2333">
-			<figcaption>Post-its</figcaption>
+			<figcaption>Conference Room</figcaption>
 		</figure>
 
 		<figure class="fw">
-			<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-9_n4p0l9.jpg"
-				srcset="
-					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_300/v1730047792/office-9_n4p0l9.jpg 300w,
-					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_600/v1730047792/office-9_n4p0l9.jpg 600w,
-					https://res.cloudinary.com/ddesm4qw0/image/upload/f_auto,q_auto,w_1200/v1730047792/office-9_n4p0l9.jpg 1200w"
+			<img src="https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084228/9._iphone_lbnvzm.jpg" srcset="
+                    https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084228/9._iphone_lbnvzm.jpg 300w,
+                    https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084228/9._iphone_lbnvzm.jpg 600w,
+                    https://res.cloudinary.com/ddesm4qw0/image/upload/v1730084228/9._iphone_lbnvzm.jpg 1200w"
 				alt="office" width="3500" height="2333">
-			<figcaption>Laptop on table</figcaption>
+			<figcaption>iphone and flowers on table</figcaption>
 		</figure>
 	</main>
 
 	<!-- FOOTER -->
 	<footer>
 		<hr>
+		<p>Thank you for visiting The Collective! We look forward to welcoming you to our inspiring workspace and
+			helping you thrive in your professional journey.</p>
 
-		<p>Thanks for dropping by! Hope to see you soon in your new office.</p>
 	</footer>
 
 </body>
